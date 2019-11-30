@@ -28,7 +28,7 @@
 											<th>DESCRIPTION</th>
 											<th>AVATAR</th>
 											<th>LINK</th>
-											<th>ACTION1</th>
+											<th>ACTION0</th>
 										</tr>
 									</thead>
 									<tbody>
