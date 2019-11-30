@@ -27,8 +27,7 @@
 											<th>TAHUN RELEASE</th>
 											<th>DESCRIPTION</th>
 											<th>AVATAR</th>
-											<th>LINK</th>
-											<th>ACTION0</th>
+											<th>ACTION</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -38,8 +37,14 @@
 											<td>{{ $data->sinopsis }}</td>
 											<td>{{ $data->tahun_release }}</td>
 											<td>{{ $data->description }}</td>
-											<td><img src="{{asset('images/'.$data->avatar)}}" style="height:50px; width:50px; cursor:pointer"></td>
-											<td>{{ $data->link }}</td>
+											<!-- <td><img src="{{asset('images/'.$data->avatar)}}" style="height:50px; width:50px; cursor:pointer"></td> -->
+											<!-- <td><video src="{{asset('video/'.$data->avatar)}}"></video></td> -->
+											<td>
+											<video width="100" controls>
+												<source src="{{asset('video/'.$data->avatar)}}" type="video/mp4">
+											</video>
+											</td>
+											
 											<td><a href="/hamura/{{$data->id}}/edit" class="btn btn-warning btn-sm">Edit</a></td>
 											<td><a href="/hamura/{{$data->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin akan dihapus ?')">Delete</a></td>
 										</tr>
@@ -102,10 +107,6 @@
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Avatar</label>
 				    <input type="file" class="form-control" name="avatar" id="exampleInputEmail1" aria-describedby="Avatar" placeholder="Avatar">
-				  </div>
-				  <div class="form-group">
-				    <label for="exampleInputEmail1">Link</label>
-				    <input type="text" class="form-control" name="link" id="exampleInputEmail1" aria-describedby="link" placeholder="Link">
 				  </div>
 				  <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

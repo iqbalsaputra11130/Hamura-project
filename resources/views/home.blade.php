@@ -27,30 +27,20 @@
 			<main class="main-content">
 				<div class="container">
 					<div class="page">
-                        @foreach($data_film as $data)
+                       
                         <div class="row">
-							<div class="col-sm-6 col-md-3">
-								<div class="latest-movie">
-									<a href="{{$data->link}}"><img src="{{asset('images/'.$data->avatar)}}" alt="Movie 3"></a>
+							<div class="col-12">
+							@foreach($data_film as $data)
+								<div class="col-sm-4 col-md-4">
+									<div class="latest-movie">
+										<video width="400" controls>
+											<source src="{{asset('video/'.$data->avatar)}}" type="video/mp4">
+										</video>
+									</div>
 								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="latest-movie">
-									<a href="{{$data->link}}"><img src="{{asset('images/'.$data->avatar)}}" alt="Movie 4"></a>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="latest-movie">
-									<a href="{{$data->link}}"><img src="{{asset('images/'.$data->avatar)}}" alt="Movie 5"></a>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="latest-movie">
-									<a href="{{$data->link}}"><img src="{{asset('images/'.$data->avatar)}}" alt="Movie 6"></a>
-								</div>
+								@endforeach
 							</div>
 						</div>
-                        @endforeach
 						
 						
 						<div class="row">

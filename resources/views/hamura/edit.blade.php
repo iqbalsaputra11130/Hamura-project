@@ -36,11 +36,7 @@
 								    <label for="exampleInputEmail1">Avatar</label>
 								    <input type="file" class="form-control" name="avatar" value="{{ $data->avatar}}">
 								  </div>
-								  <div class="form-group">
-								    <label for="exampleInputEmail1">Link</label>
-								    <input type="text" class="form-control" name="link" value="{{ $data->link}}">
-								  </div>
-									<button type="submit" class="btn btn-warning">Update</button>
+								  	<button type="submit" class="btn btn-warning">Update</button>
 								</form>
 							</div>
 						</div>
